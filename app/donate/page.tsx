@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { IMAGE_SIZES } from "@/lib/images";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
 import { CTAButtonGroup } from "@/components/CTAButtonGroup";
@@ -56,15 +57,15 @@ export default function DonatePage() {
             </div>
             <p className="mt-6 text-xs text-[#5B2C83]/80">{CTA.trustLine}</p>
           </div>
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#5B2C83]/12 shadow-2xl shadow-[#3D1B5F]/20">
-            <div className="hero-overlay absolute inset-0 z-10 rounded-[2rem]" />
-            <Image
+          <div className="image-skeleton relative h-[240px] overflow-hidden rounded-2xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/20 sm:h-[320px] sm:rounded-[2rem] sm:shadow-2xl md:h-[440px]">
+            <div className="hero-overlay absolute inset-0 z-10 rounded-2xl sm:rounded-[2rem]" />
+            <OptimizedImage
               src="/images/moniquexmas.jpg"
               alt="Donate to Monique-A-Wish — community giving and holiday support for Emporia, Kansas families"
-              width={1200}
-              height={900}
-              priority
-              className="h-[240px] w-full object-cover object-center sm:h-[320px] md:h-[440px]"
+              fill
+              sizes={IMAGE_SIZES.hero}
+              loading="lazy"
+              className="object-cover object-center"
             />
           </div>
         </div>

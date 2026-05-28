@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { IMAGE_SIZES } from "@/lib/images";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/FadeIn";
@@ -121,15 +122,18 @@ export function OurStoryPageContent() {
 
       {/* Warm imagery interlude */}
       <section className="relative px-4 py-10 sm:px-5 sm:py-12 md:px-8">
-        <FadeIn className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] shadow-2xl shadow-[#3D1B5F]/15">
-          <div className="hero-overlay pointer-events-none absolute inset-0 z-10 rounded-[2rem]" />
-          <Image
-            src="/images/together.png"
-            alt="Monique-A-Wish families and volunteers united in community support in Emporia, Kansas"
-            width={1400}
-            height={700}
-            className="h-[280px] w-full object-cover object-center md:h-[380px]"
-          />
+        <FadeIn className="relative mx-auto max-w-6xl overflow-hidden rounded-2xl shadow-2xl shadow-[#3D1B5F]/15 sm:rounded-[2rem]">
+          <div className="hero-overlay pointer-events-none absolute inset-0 z-10 rounded-2xl sm:rounded-[2rem]" />
+          <div className="image-skeleton relative h-[280px] md:h-[380px]">
+            <OptimizedImage
+              src="/images/together.png"
+              alt="Monique-A-Wish families and volunteers united in community support in Emporia, Kansas"
+              fill
+              sizes={IMAGE_SIZES.content}
+              loading="lazy"
+              className="object-cover object-center"
+            />
+          </div>
         </FadeIn>
       </section>
 

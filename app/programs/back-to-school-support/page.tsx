@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { IMAGE_SIZES } from "@/lib/images";
 import Link from "next/link";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
@@ -45,15 +46,14 @@ export default function BackToSchoolSupportPage() {
               <CTAButtonGroup layout="stack" />
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/15 sm:rounded-[2rem] sm:shadow-2xl">
-            <Image
+          <div className="image-skeleton relative h-[220px] overflow-hidden rounded-2xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/15 sm:h-[420px] sm:rounded-[2rem] sm:shadow-2xl">
+            <OptimizedImage
               src="/images/backtoschool.png"
               alt="Back-to-school support — backpacks and supplies for Emporia, Kansas students from Monique-A-Wish"
-              width={900}
-              height={700}
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="h-[220px] w-full object-cover object-center sm:h-auto sm:max-h-[420px]"
+              fill
+              sizes={IMAGE_SIZES.content}
+              loading="lazy"
+              className="object-cover object-center"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#3D1B5F]/20 via-transparent to-transparent" />
           </div>

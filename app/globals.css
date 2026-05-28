@@ -38,6 +38,27 @@ img {
   max-width: 100%;
 }
 
+.image-skeleton {
+  background:
+    linear-gradient(110deg, #e8ddf5 8%, #f8f3ea 18%, #e8ddf5 33%);
+  background-size: 200% 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .image-skeleton:has(img:not([data-loaded="true"])) {
+    animation: image-shimmer 1.4s ease-in-out infinite;
+  }
+}
+
+@keyframes image-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
 .prose-width {
   max-width: 42rem;
   line-height: 1.65;

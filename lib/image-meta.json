@@ -1,0 +1,66 @@
+{
+  "backtoschool": {
+    "original": "/images/backtoschool.png",
+    "webp": "/images/backtoschool.webp",
+    "width": 1122,
+    "height": 1402,
+    "hasAlpha": false,
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoKAAwAA4BaJbACdAYtfbWI8Yy8AAD+NHlIvPvg3EiQ39Aghyx46v4mJItKgZXD/u4w3Sho2xUdfASKkUHJxs2lESGN3oG1TBawXnvpe6t6y7i3Tzk/eAAA"
+  },
+  "community": {
+    "original": "/images/community.png",
+    "webp": "/images/community.webp",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": false,
+    "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoMAAgAA4BaJQBOgBu20u4XoAAA/uiGB1M0KVNmkwakCX0UVJgJhtwbq1gtts4b7Rp8pYz882/LzyNgmmcgAA=="
+  },
+  "emergancyservices": {
+    "original": "/images/emergancyservices.png",
+    "webp": "/images/emergancyservices.webp",
+    "width": 1402,
+    "height": 1122,
+    "hasAlpha": false,
+    "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAQCdASoMAAoAA4BaJbACdADY5AggAP5+oi+jzSwm8QKEeCRHWVIZ21KbAVQIi6dQjvxwxdTnMHt7KB6q/AMMGVQ+ywfe5m4ySbq8Cxyr08lxsIlgAA=="
+  },
+  "help": {
+    "original": "/images/help.png",
+    "webp": "/images/help.webp",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": false,
+    "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABQAgCdASoMAAgAA4BaJYgCdH8AGYDb6CGBc4AA/utqm3M5iaTTBGnhX8BWTu2+lOtpZo7eQNVQr39t2TCrz1c36apxdgDqiTU4MtTaAAA="
+  },
+  "hope": {
+    "original": "/images/hope.png",
+    "webp": "/images/hope.webp",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": false,
+    "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoMAAgAA4BaJZgCdAELXHc2dVAA/ud8jxI//PRHm0ktV5H0bFGU+OsADkrZqIQ3HfLvokeMR+TCUgCBifhCNPeDkAAAAA=="
+  },
+  "moniquelogo": {
+    "original": "/images/moniquelogo.jpg",
+    "webp": "/images/moniquelogo.webp",
+    "width": 1024,
+    "height": 1024,
+    "hasAlpha": false,
+    "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoMAAwAA4BaJbACdAEPAI9lVBgAAP7IpgVkdMngu0hpNmXvJIdwnPmrjdH8IsGBNPOikbZKyTZut9QM806DzhHMAfob9MJRAAA="
+  },
+  "moniquexmas": {
+    "original": "/images/moniquexmas.jpg",
+    "webp": "/images/moniquexmas.webp",
+    "width": 750,
+    "height": 500,
+    "hasAlpha": false,
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwAgCdASoMAAgAA4BaJQBYheAQRJleHNupFMkAAM4+RE5tOmQer/rmv2qOJfV7e2s8UrkEYWV/IvA/hVL9/1OuQ9tFLEV4uKLt2yosSZPTwAAA"
+  },
+  "together": {
+    "original": "/images/together.png",
+    "webp": "/images/together.webp",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": false,
+    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoMAAgAA4BaJaACdADcqWi8zAD+6Jt1Vf3nU69sdovcYxmh3S3DkiGa6PFZ5s8BEk9TQZ6zYopvmFysIIK0aDiwAAA="
+  }
+}

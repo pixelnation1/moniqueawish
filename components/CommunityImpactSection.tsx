@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { IMAGE_SIZES } from "@/lib/images";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -52,17 +53,17 @@ export function CommunityImpactSection() {
               className="group grid items-center gap-0 overflow-hidden rounded-2xl border border-[#5B2C83]/12 bg-white shadow-lg shadow-[#3D1B5F]/8 transition-all duration-300 hover:shadow-xl sm:rounded-3xl md:gap-12 lg:grid-cols-2"
             >
               <div
-                className={`relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[340px] ${
+                className={`image-skeleton relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[340px] ${
                   card.reverse ? "lg:order-2" : "lg:order-1"
                 }`}
               >
-                <Image
+                <OptimizedImage
                   src={card.image}
                   alt={card.alt}
-                  width={900}
-                  height={675}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                  fill
+                  sizes={IMAGE_SIZES.impactSplit}
+                  loading="lazy"
+                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#3D1B5F]/30 via-[#3D1B5F]/5 to-[#F2C66D]/8" />
               </div>

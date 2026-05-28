@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { IMAGE_SIZES } from "@/lib/images";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -49,14 +50,16 @@ export function SupportSection({ showHeader = true, className = "" }: SupportSec
             transition={{ duration: 0.65 }}
             className="group relative max-w-full overflow-hidden rounded-2xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/12 transition-shadow duration-300 sm:rounded-3xl hover:shadow-2xl"
           >
-            <Image
-              src="/images/help.png"
-              alt="Monique-A-Wish volunteers offering hands-on family support in Emporia, Kansas"
-              width={900}
-              height={900}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="h-auto w-full object-contain bg-gradient-to-br from-[#F8F3EA] to-[#E8DDF5]/50 transition-transform duration-500 group-hover:scale-[1.02]"
-            />
+            <div className="image-skeleton relative aspect-[4/3] w-full sm:aspect-[3/4] lg:aspect-square">
+              <OptimizedImage
+                src="/images/help.png"
+                alt="Monique-A-Wish volunteers offering hands-on family support in Emporia, Kansas"
+                fill
+                sizes={IMAGE_SIZES.content}
+                loading="lazy"
+                className="object-contain bg-gradient-to-br from-[#F8F3EA] to-[#E8DDF5]/50 transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+            </div>
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#3D1B5F]/20 via-transparent to-[#F2C66D]/5" />
           </motion.div>
 

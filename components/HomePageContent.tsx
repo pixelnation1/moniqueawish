@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { IMAGE_SIZES } from "@/lib/images";
 import { CTAButtonGroup } from "@/components/CTAButtonGroup";
 import { Button } from "@/components/ui/Button";
 import { GetHelpBanner } from "@/components/get-help/GetHelpBanner";
@@ -84,14 +85,17 @@ export function HomePageContent() {
             className="relative"
           >
             <div className="hero-overlay absolute inset-0 z-10 rounded-[2rem] border border-white/25" />
-            <Image
-              src="/images/moniquexmas.jpg"
-              alt="Monique-A-Wish holiday assistance event serving families in Emporia, Kansas"
-              width={1400}
-              height={1000}
-              priority
-              className="h-[260px] w-full max-w-full rounded-2xl object-cover object-center shadow-xl shadow-[#3D1B5F]/25 transition-transform duration-700 ease-out sm:h-[360px] sm:rounded-[2rem] md:h-[540px] md:shadow-2xl"
-            />
+            <div className="image-skeleton relative h-[260px] overflow-hidden rounded-2xl sm:h-[360px] sm:rounded-[2rem] md:h-[540px]">
+              <OptimizedImage
+                src="/images/moniquexmas.jpg"
+                alt="Monique-A-Wish holiday assistance event serving families in Emporia, Kansas"
+                fill
+                sizes={IMAGE_SIZES.hero}
+                priority
+                fadeIn={false}
+                className="object-cover object-center shadow-xl shadow-[#3D1B5F]/25 md:shadow-2xl"
+              />
+            </div>
           </motion.div>
         </div>
       </section>

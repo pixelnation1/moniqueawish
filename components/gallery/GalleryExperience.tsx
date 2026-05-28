@@ -1,8 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { IMAGE_SIZES, getImageDimensions } from "@/lib/images";
 import {
   galleryFilters,
   galleryItems,
@@ -132,15 +133,15 @@ export function GalleryExperience() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ delay: (idx % 6) * 0.04, duration: 0.45 }}
               onClick={() => setLightboxIndex(entry.lightboxIndex)}
-              className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-white/80 shadow-md shadow-[#5B2C83]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5B2C83] sm:rounded-2xl sm:shadow-lg"
+              className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-white/80 bg-[#E8DDF5]/30 shadow-md shadow-[#5B2C83]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5B2C83] sm:rounded-2xl sm:shadow-lg"
             >
-              <Image
+              <OptimizedImage
                 src={entry.item.src}
                 alt={entry.item.alt}
                 fill
                 loading="lazy"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                sizes={IMAGE_SIZES.galleryGrid}
+                className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#3D1B5F]/45 via-transparent to-transparent" />
               <span className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-[#5B2C83]">
@@ -186,14 +187,19 @@ export function GalleryExperience() {
               className="relative w-full max-w-5xl px-2 sm:px-12 md:px-16"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src={activeItem.src}
-                alt={activeItem.alt}
-                width={1400}
-                height={1000}
-                className="mx-auto max-h-[55vh] w-full rounded-lg object-contain shadow-2xl sm:max-h-[75vh] sm:w-auto sm:rounded-xl"
-                priority
-              />
+              {(() => {
+                const dims = getImageDimensions(activeItem.src);
+                return (
+                  <OptimizedImage
+                    src={activeItem.src}
+                    alt={activeItem.alt}
+                    width={dims.width}
+                    height={dims.height}
+                    sizes="100vw"
+                    className="mx-auto max-h-[55vh] w-full rounded-lg object-contain shadow-2xl sm:max-h-[75vh] sm:w-auto sm:rounded-xl"
+                  />
+                );
+              })()}
               <p className="mt-3 line-clamp-3 px-2 text-center text-xs text-[#F8F3EA]/90 sm:mt-4 sm:text-sm">
                 {activeItem.alt}
               </p>

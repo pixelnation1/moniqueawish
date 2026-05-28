@@ -1,3 +1,5 @@
+import { PROGRAM_IMAGES } from "@/lib/images";
+
 export const SITE = {
   name: "Monique-A-Wish",
   tagline: "Infinity gifts of love to those in need",
@@ -232,21 +234,21 @@ export const programs = [
     title: "Christmas Celebration",
     description:
       "Bringing joy and dignity to families during the holiday season through gifts, meals, and shared celebration.",
-    image: "/images/moniquexmas.jpg",
+    image: PROGRAM_IMAGES.christmas,
     href: "/programs/christmas-celebration",
   },
   {
     title: "Back-to-School Support",
     description:
       "Equipping students with backpacks, school supplies, and encouragement so every child starts with confidence.",
-    image: "/images/backtoschool.png",
+    image: PROGRAM_IMAGES.backToSchool,
     href: "/programs/back-to-school-support",
   },
   {
     title: "Emergency Assistance",
     description:
       "Providing urgent relief for families facing unexpected hardship through direct aid and partner resources.",
-    image: "/images/emergancyservices.png",
+    image: PROGRAM_IMAGES.emergency,
     href: "/programs/emergency-assistance",
   },
 ] as const;
@@ -273,43 +275,43 @@ export type GalleryCategory = Exclude<GalleryFilterId, "all">;
 export const galleryItems = [
   {
     id: "christmas-1",
-    src: "/images/moniquexmas.jpg",
+    src: PROGRAM_IMAGES.christmas,
     alt: "Monique-A-Wish Christmas celebration with families and volunteers gathered in joy",
     category: "christmas",
   },
   {
     id: "christmas-2",
-    src: "/images/moniquexmas.jpg",
+    src: PROGRAM_IMAGES.christmas,
     alt: "Holiday gift distribution bringing warmth to children and parents",
     category: "christmas",
   },
   {
     id: "christmas-3",
-    src: "/images/moniquexmas.jpg",
+    src: PROGRAM_IMAGES.christmas,
     alt: "Organized gift room filled with care for Emporia families at Christmas",
     category: "christmas",
   },
   {
     id: "back-to-school-1",
-    src: "/images/backtoschool.png",
+    src: PROGRAM_IMAGES.backToSchool,
     alt: "Back-to-school backpacks and supplies prepared for students in need",
     category: "back-to-school",
   },
   {
     id: "back-to-school-2",
-    src: "/images/backtoschool.png",
+    src: PROGRAM_IMAGES.backToSchool,
     alt: "Students receiving encouragement and supplies for a confident school year",
     category: "back-to-school",
   },
   {
     id: "emergency-1",
-    src: "/images/emergancyservices.png",
+    src: PROGRAM_IMAGES.emergency,
     alt: "Emergency assistance supplies ready for families facing sudden hardship",
     category: "emergency",
   },
   {
     id: "emergency-2",
-    src: "/images/emergancyservices.png",
+    src: PROGRAM_IMAGES.emergency,
     alt: "Community relief items distributed with compassion during urgent need",
     category: "emergency",
   },

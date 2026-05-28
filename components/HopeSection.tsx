@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { IMAGE_SIZES } from "@/lib/images";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { CTA } from "@/lib/cta";
@@ -42,14 +43,16 @@ export function HopeSection() {
         >
           <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-[#F2C66D]/35 to-[#5B2C83]/20 blur-xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-white/60 shadow-2xl shadow-[#3D1B5F]/20">
-            <Image
-              src="/images/hope.png"
-              alt="Hope and community care from Monique-A-Wish nonprofit in Emporia, Kansas"
-              width={900}
-              height={900}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="h-auto w-full object-contain bg-[#FFFDF9]/80 p-2"
-            />
+            <div className="image-skeleton relative aspect-square w-full">
+              <OptimizedImage
+                src="/images/hope.png"
+                alt="Hope and community care from Monique-A-Wish nonprofit in Emporia, Kansas"
+                fill
+                sizes={IMAGE_SIZES.content}
+                loading="lazy"
+                className="object-contain bg-[#FFFDF9]/80 p-2"
+              />
+            </div>
           </div>
         </motion.div>
       </div>
