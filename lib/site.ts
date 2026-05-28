@@ -35,6 +35,7 @@ export const programs = [
     description:
       "Equipping students with backpacks, school supplies, and encouragement so every child starts with confidence.",
     image: "/images/backtoschool.png",
+    href: "/programs/back-to-school-support",
   },
   {
     title: "Emergency Assistance",

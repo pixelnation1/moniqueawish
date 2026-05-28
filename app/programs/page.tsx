@@ -26,7 +26,14 @@ export default function ProgramsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 lg:grid-cols-3">
             {programs.map((program, idx) => (
-              <ProgramCard key={program.title} {...program} index={idx} href="/contact" />
+              <ProgramCard
+                key={program.title}
+                title={program.title}
+                description={program.description}
+                image={program.image}
+                href={"href" in program ? program.href : "/contact"}
+                index={idx}
+              />
             ))}
           </div>
         </div>
