@@ -21,7 +21,7 @@ export default function ImpactPage() {
         description="Every gift, volunteer hour, and partnership helps families experience dignity, joy, and stability throughout the year."
       />
 
-      <section className="impact-bg px-5 py-16 text-white md:px-8 md:py-20">
+      <section className="impact-bg px-4 py-12 sm:px-5 sm:py-16 text-white md:px-8 md:py-20">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             light
@@ -43,7 +43,7 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      <section className="px-5 py-16 md:px-8 md:py-20">
+      <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             title="Families Helped"
@@ -66,7 +66,7 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      <section className="bg-[#F8F3EA] px-5 py-16 md:px-8 md:py-20">
+      <section className="bg-[#F8F3EA] px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-6xl">
           <SectionHeader title="Voices from Our Community" />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -83,7 +83,7 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      <section className="px-5 py-16 md:px-8 md:py-20">
+      <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-4xl">
           <SectionHeader
             title="Community Outreach"
@@ -92,7 +92,7 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      <section className="bg-[#F8F3EA] px-5 py-16 md:px-8 md:py-20">
+      <section className="bg-[#F8F3EA] px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-4xl rounded-3xl border border-[#5B2C83]/14 bg-white p-8 md:p-10">
           <SectionHeader
             align="left"
@@ -110,8 +110,9 @@ export default function ImpactPage() {
       <CTABlock
         title="Help Us Reach More Families"
         description="Your support expands outreach, strengthens programs, and brings hope to neighbors who need it most."
-        primaryLabel="Donate Today"
+        primaryLabel="Help a Family Today"
         primaryHref="/donate"
+        secondaryLabel="Become Part of the Mission"
       />
     </>
   );

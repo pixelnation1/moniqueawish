@@ -21,16 +21,24 @@ export function SectionHeader({
     <div className={`max-w-3xl ${alignClass}`}>
       {eyebrow && (
         <p
-          className={`mb-4 text-xs tracking-[0.28em] uppercase ${
+          className={`mb-3 text-xs font-medium tracking-[0.32em] uppercase ${
             light ? "text-[#F2C66D]" : "text-[#5B2C83]"
           }`}
         >
           {eyebrow}
         </p>
       )}
-      <h2 className={`text-balance text-3xl md:text-5xl ${titleColor}`}>{title}</h2>
+      <h2
+        className={`text-balance text-2xl font-semibold leading-snug tracking-tight sm:text-3xl md:text-5xl lg:text-[3.25rem] ${titleColor}`}
+      >
+        {title}
+      </h2>
       {description && (
-        <p className={`mt-5 text-balance text-sm leading-7 md:text-base ${descColor}`}>
+        <p
+          className={`prose-width mt-4 max-w-[36rem] text-balance text-sm leading-relaxed sm:mt-6 md:text-base ${descColor} ${
+            align === "center" ? "mx-auto" : ""
+          }`}
+        >
           {description}
         </p>
       )}

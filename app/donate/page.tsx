@@ -2,51 +2,106 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
-import { Button } from "@/components/ui/Button";
+import { CTAButtonGroup } from "@/components/CTAButtonGroup";
+import { DonationImpactStats } from "@/components/DonationImpactStats";
+import {
+  WhyFamiliesNeedSupport,
+  HowDonationHelps,
+  CommunityImpactTrust,
+} from "@/components/TrustSections";
 import { donationTiers } from "@/lib/site";
+import { CTA } from "@/lib/cta";
 
 export const metadata: Metadata = {
   title: "Donate",
   description:
-    "Support Monique-A-Wish with a one-time or monthly gift. Help families in Emporia, Kansas through compassionate community programs.",
+    "Help families in Emporia, Kansas through Monique-A-Wish. Your gift provides meals, school supplies, holiday support, and emergency assistance.",
 };
+
+const reasonsToGive = [
+  {
+    title: "Local families count on us",
+    text: "Your gift stays in the Emporia community—supporting neighbors, not distant causes.",
+  },
+  {
+    title: "Programs that meet real needs",
+    text: "From Christmas celebrations to back-to-school and emergency aid, we show up year-round.",
+  },
+  {
+    title: "Dignity in every interaction",
+    text: "Families are welcomed with respect, warmth, and care—not judgment.",
+  },
+];
 
 export default function DonatePage() {
   return (
     <>
-      <section className="relative px-5 pb-8 pt-6 md:px-8">
+      <section className="relative overflow-hidden bg-[#F8F3EA] px-4 pb-12 pt-4 sm:px-5 sm:pb-16 sm:pt-8 md:px-8 md:pb-24 md:pt-12">
         <div className="section-glow left-[-80px] top-10 h-52 w-52 bg-[#F2C66D]/45" />
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
+        <div className="section-glow right-[-60px] top-24 h-56 w-56 bg-[#E8DDF5]/70" />
+        <div className="relative mx-auto grid max-w-7xl gap-8 sm:gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="mb-4 text-xs tracking-[0.28em] text-[#5B2C83] uppercase">Give Hope</p>
-            <h1 className="text-balance text-4xl text-[#3D1B5F] md:text-5xl">
+            <p className="mb-4 text-xs font-medium tracking-[0.32em] text-[#5B2C83] uppercase">
+              Give With Heart
+            </p>
+            <h1 className="text-balance text-2xl font-semibold leading-snug text-[#3D1B5F] sm:text-4xl md:text-5xl lg:text-6xl">
               Your Gift Turns Grief Into Hope
             </h1>
-            <p className="mt-6 leading-8 text-[#4E4E4E]">
-              Every donation helps Monique-A-Wish serve families with holiday celebrations, school support,
-              and emergency assistance—delivered with dignity and love.
+            <p className="prose-width mt-6 leading-relaxed text-[#4E4E4E]">
+              When you give to Monique-A-Wish, you are not just making a donation—you are telling a family
+              in Emporia that they matter, that their community sees them, and that hope is still possible.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="mailto:contact@moniqueawish.org">Start Giving</Button>
-              <Button href="/contact" variant="secondary">
-                Ask a Question
-              </Button>
+            <div className="mt-10">
+              <CTAButtonGroup
+                primaryLabel={CTA.donateLarge}
+                showSecondary
+                layout="stack"
+              />
             </div>
+            <p className="mt-6 text-xs text-[#5B2C83]/80">{CTA.trustLine}</p>
           </div>
-          <div className="relative overflow-hidden rounded-[2rem] shadow-2xl shadow-[#3D1B5F]/20">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#5B2C83]/12 shadow-2xl shadow-[#3D1B5F]/20">
             <div className="hero-overlay absolute inset-0 z-10 rounded-[2rem]" />
             <Image
               src="/images/moniquexmas.jpg"
-              alt="Monique-A-Wish community giving event"
+              alt="Monique-A-Wish community giving event bringing holiday hope to families"
               width={1200}
               height={900}
-              className="h-[360px] w-full object-cover md:h-[420px]"
+              priority
+              className="h-[240px] w-full object-cover object-center sm:h-[320px] md:h-[440px]"
             />
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-16 md:px-8 md:py-20">
+      <WhyFamiliesNeedSupport />
+
+      <DonationImpactStats />
+
+      <HowDonationHelps />
+
+      <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionHeader
+            eyebrow="Reasons to Give"
+            title="Why Your Support Matters"
+            description="Every gift—large or small—creates a ripple of hope in our community."
+          />
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {reasonsToGive.map((reason) => (
+              <article
+                key={reason.title}
+                className="rounded-2xl border border-[#D4A017]/25 bg-white p-6 shadow-md"
+              >
+                <h3 className="text-lg font-semibold text-[#3D1B5F]">{reason.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-[#4A4A4A]">{reason.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F8F3EA] px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             title="Choose Your Impact"
@@ -56,56 +111,53 @@ export default function DonatePage() {
             {donationTiers.map((tier) => (
               <article
                 key={tier.title}
-                className="rounded-2xl border border-[#5B2C83]/14 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+                className="flex flex-col rounded-2xl border border-[#5B2C83]/14 bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <p className="text-2xl font-semibold text-[#D4A017]">{tier.amount}</p>
                 <h3 className="mt-2 text-xl text-[#3D1B5F]">{tier.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#4A4A4A]">{tier.description}</p>
+                <p className="mt-3 flex-1 text-sm leading-7 text-[#4A4A4A]">{tier.description}</p>
                 <a
-                  href="mailto:contact@moniqueawish.org?subject=Donation%20Inquiry"
-                  className="mt-5 inline-flex text-sm font-semibold text-[#5B2C83] hover:underline"
+                  href={`mailto:contact@moniqueawish.org?subject=Donation%20-%20${encodeURIComponent(tier.title)}`}
+                  className="mt-5 inline-flex rounded-full border border-[#5B2C83]/22 px-4 py-2 text-sm font-semibold text-[#5B2C83] transition hover:bg-[#E8DDF5]"
                 >
                   Give at this level →
                 </a>
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-[#F8F3EA] px-5 py-16 md:px-8 md:py-20">
-        <div className="mx-auto max-w-4xl">
-          <SectionHeader
-            title="Sponsorship Opportunities"
-            description="Businesses and community partners can sponsor programs, events, or supply drives—creating visible impact while honoring Monique's legacy."
-          />
-          <p className="mt-8 text-center text-sm leading-7 text-[#4A4A4A]">
-            Contact us at{" "}
-            <a href="mailto:contact@moniqueawish.org" className="font-semibold text-[#5B2C83]">
+          <p className="mt-10 text-center text-sm text-[#5B2C83]">
+            Ready to give? Email{" "}
+            <a href="mailto:contact@moniqueawish.org" className="font-semibold underline">
               contact@moniqueawish.org
             </a>{" "}
-            to discuss sponsorship packages tailored to your organization.
+            and we will guide you through the process with care.
           </p>
         </div>
       </section>
 
-      <section className="px-5 py-16 md:px-8 md:py-20">
+      <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-4xl rounded-3xl border border-[#D4A017]/30 bg-gradient-to-br from-[#FFFDF9] to-[#E8DDF5] p-8 text-center shadow-lg md:p-12">
           <SectionHeader
             title="Monthly Giving"
             description="Sustain year-round support with a recurring gift. Monthly donors help us plan ahead and respond when families need us most."
           />
-          <div className="mt-8">
-            <Button href="mailto:contact@moniqueawish.org?subject=Monthly%20Giving">
-              Become a Monthly Donor
-            </Button>
+          <div className="mt-8 flex justify-center">
+            <CTAButtonGroup
+              primaryLabel="Become a Monthly Donor"
+              primaryHref="mailto:contact@moniqueawish.org?subject=Monthly%20Giving"
+              showSecondary={false}
+              primaryMicrocopy="Set up recurring support that keeps hope alive all year."
+            />
           </div>
         </div>
       </section>
 
+      <CommunityImpactTrust />
+
       <CTABlock
         title="Every Gift Honors Monique's Memory"
         description="Thank you for helping us bring love, light, and practical support to families across our community."
+        primaryLabel={CTA.donatePrimary}
       />
     </>
   );

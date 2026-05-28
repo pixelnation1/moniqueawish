@@ -11,7 +11,7 @@ type PageHeroProps = {
 export function PageHero({ eyebrow, title, description, children, dark = false }: PageHeroProps) {
   return (
     <section
-      className={`relative px-5 pb-16 pt-8 md:px-8 md:pb-20 ${
+      className={`relative px-4 pb-12 pt-4 sm:px-5 sm:pb-16 sm:pt-8 md:px-8 md:pb-20 ${
         dark ? "impact-bg text-white" : "bg-[#F8F3EA]"
       }`}
     >
@@ -31,7 +31,7 @@ export function PageHero({ eyebrow, title, description, children, dark = false }
             {eyebrow}
           </p>
         )}
-        <h1 className={`text-balance text-4xl md:text-5xl lg:text-6xl ${dark ? "text-white" : "text-[#3D1B5F]"}`}>
+        <h1 className={`text-balance text-3xl font-semibold leading-snug sm:text-4xl md:text-5xl lg:text-6xl ${dark ? "text-white" : "text-[#3D1B5F]"}`}>
           {title}
         </h1>
         {description && (

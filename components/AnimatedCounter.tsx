@@ -8,12 +8,27 @@ type AnimatedCounterProps = {
   suffix?: string;
   display?: string;
   duration?: number;
+  tone?: "light" | "brand";
+  className?: string;
 };
 
-export function AnimatedCounter({ value, suffix = "", display, duration = 1.8 }: AnimatedCounterProps) {
+const toneClasses = {
+  light: "text-white",
+  brand: "text-[#3D1B5F]",
+};
+
+export function AnimatedCounter({
+  value,
+  suffix = "",
+  display,
+  duration = 1.8,
+  tone = "light",
+  className = "",
+}: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
   const [count, setCount] = useState(0);
+  const colorClass = toneClasses[tone];
 
   useEffect(() => {
     if (!inView || display) return;
@@ -35,7 +50,7 @@ export function AnimatedCounter({ value, suffix = "", display, duration = 1.8 }:
 
   if (display) {
     return (
-      <span ref={ref} className="text-3xl font-semibold text-white">
+      <span ref={ref} className={`text-3xl font-semibold ${colorClass} ${className}`}>
         {display}
       </span>
     );
@@ -46,7 +61,7 @@ export function AnimatedCounter({ value, suffix = "", display, duration = 1.8 }:
       ref={ref}
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : {}}
-      className="text-3xl font-semibold text-white"
+      className={`text-3xl font-semibold ${colorClass} ${className}`}
     >
       {count.toLocaleString()}
       {suffix}

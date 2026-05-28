@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { navLinks, SITE } from "@/lib/site";
+import { CTA } from "@/lib/cta";
 import { LogoDisplay } from "@/components/LogoDisplay";
 
 export function Footer() {
   return (
-    <footer className="bg-[#2A123F] px-5 py-14 text-[#F8F3EA] md:px-8">
-      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-[#2A123F] px-4 py-10 text-[#F8F3EA] sm:px-5 sm:py-14 md:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
             <LogoDisplay size="footer" footerGlow glow />
@@ -32,7 +33,7 @@ export function Footer() {
             ))}
             <li>
               <Link href="/donate" className="hover:text-[#F2C66D]">
-                Donate
+                {CTA.donateNav}
               </Link>
             </li>
           </ul>

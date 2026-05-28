@@ -18,7 +18,7 @@ export default function ContactPage() {
         description="Whether you want to volunteer, partner with us, or learn more about our mission—we are here to connect."
       />
 
-      <section className="px-5 py-16 md:px-8 md:py-20">
+      <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
           <div>
             <SectionHeader align="left" title="Get in Touch" />
@@ -52,7 +52,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-[#F8F3EA] px-5 py-16 md:px-8 md:py-20">
+      <section className="bg-[#F8F3EA] px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeader
             title="Volunteer Inquiry"
