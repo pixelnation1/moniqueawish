@@ -42,6 +42,7 @@ export const programs = [
     description:
       "Providing urgent relief for families facing unexpected hardship through direct aid and partner resources.",
     image: "/images/emergancyservices.png",
+    href: "/programs/emergency-assistance",
   },
 ] as const;
 
