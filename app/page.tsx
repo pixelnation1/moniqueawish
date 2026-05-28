@@ -8,6 +8,9 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
 import { ProgramCard } from "@/components/ProgramCard";
 import { StatCard } from "@/components/StatCard";
+import { CommunityImpactSection } from "@/components/CommunityImpactSection";
+import { HopeSection } from "@/components/HopeSection";
+import { SupportSection } from "@/components/SupportSection";
 import { impactStats, programs } from "@/lib/site";
 
 export default function HomePage() {
@@ -59,7 +62,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#F8F3EA] px-5 py-20 md:px-8 md:py-24">
+      <CommunityImpactSection />
+
+      <HopeSection />
+
+      <SupportSection className="bg-[#F8F3EA]" />
+
+      <section className="px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Our Mission"

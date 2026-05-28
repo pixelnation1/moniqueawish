@@ -95,3 +95,10 @@ h4 {
     radial-gradient(circle at 50% 45%, rgb(242 198 109 / 0.42), transparent 40%),
     radial-gradient(circle at 50% 58%, rgb(91 44 131 / 0.16), transparent 62%);
 }
+
+.hope-section-bg {
+  background:
+    radial-gradient(circle at 15% 20%, rgb(242 198 109 / 0.28), transparent 32%),
+    radial-gradient(circle at 88% 70%, rgb(232 221 245 / 0.55), transparent 38%),
+    linear-gradient(145deg, rgb(248 243 234) 0%, rgb(255 253 249) 45%, rgb(232 221 245) 100%);
+}

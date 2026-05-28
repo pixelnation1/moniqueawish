@@ -44,13 +44,20 @@ export const programs = [
   },
 ] as const;
 
+export const brandImages = {
+  community: "/images/community.png",
+  together: "/images/together.png",
+  hope: "/images/hope.png",
+  help: "/images/help.png",
+} as const;
+
 export const galleryImages = [
-  { src: "/images/moniquexmas.jpg", alt: "Monique-A-Wish holiday community gathering" },
-  { src: "/images/moniquexmas.jpg", alt: "Families receiving gifts and support" },
-  { src: "/images/moniquexmas.jpg", alt: "Volunteers serving the Emporia community" },
-  { src: "/images/moniquexmas.jpg", alt: "Christmas celebration outreach event" },
-  { src: "/images/moniquexmas.jpg", alt: "Community members celebrating together" },
-  { src: "/images/moniquexmas.jpg", alt: "Year-round giving initiative moment" },
+  { src: "/images/community.png", alt: "Monique-A-Wish community volunteers and families united in service" },
+  { src: "/images/together.png", alt: "Supporters standing together at a Monique-A-Wish outreach event" },
+  { src: "/images/hope.png", alt: "A hopeful moment honoring Monique-A-Wish's mission of compassion" },
+  { src: "/images/help.png", alt: "Volunteers providing hands-on help to families in need" },
+  { src: "/images/moniquexmas.jpg", alt: "Monique-A-Wish holiday community gathering and gift distribution" },
+  { src: "/images/moniquexmas.jpg", alt: "Families receiving gifts and warm support during the holidays" },
 ] as const;
 
 export const timeline = [

@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
 import { ProgramCard } from "@/components/ProgramCard";
 import { Button } from "@/components/ui/Button";
+import { SupportSection } from "@/components/SupportSection";
 import { programs } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -30,6 +31,8 @@ export default function ProgramsPage() {
           </div>
         </div>
       </section>
+
+      <SupportSection className="border-t border-[#5B2C83]/8 bg-white" />
 
       <section className="bg-[#F8F3EA] px-5 py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-4xl text-center">
