@@ -11,6 +11,7 @@ import { LogoDisplay } from "@/components/LogoDisplay";
 import { CTAButtonGroup } from "@/components/CTAButtonGroup";
 import { SectionDivider } from "@/components/SectionDivider";
 import { DecorativeAccents } from "@/components/DecorativeAccents";
+import { FounderStorySection } from "@/components/founder/FounderStorySection";
 import { StoryQuote } from "@/components/our-story/StoryQuote";
 import { storyTimeline, missionValues, storyQuotes } from "@/lib/site";
 import { CTA } from "@/lib/cta";
@@ -56,8 +57,12 @@ export function OurStoryPageContent() {
 
       <SectionDivider />
 
-      {/* Founder Story */}
-      <section className="bg-[#FFFDF9] px-4 py-14 sm:px-5 sm:py-20 md:px-8 md:py-28">
+      <FounderStorySection />
+
+      <SectionDivider />
+
+      {/* Organization origins */}
+      <section className="bg-section-lavender px-4 py-14 sm:px-5 sm:py-20 md:px-8 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-8 sm:gap-12 lg:grid-cols-2 lg:items-center lg:gap-14">
           <FadeIn>
             <div className="relative flex min-h-[240px] items-center justify-center rounded-2xl border border-[#D4A017]/24 bg-white/80 px-4 py-8 shadow-xl shadow-[#5B2C83]/12 sm:min-h-[320px] sm:rounded-3xl sm:px-6 sm:py-10 md:min-h-[360px]">

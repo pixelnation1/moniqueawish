@@ -1,4 +1,16 @@
-import { PROGRAM_IMAGES } from "@/lib/images";
+import { FOUNDER_IMAGE, PROGRAM_IMAGES } from "@/lib/images";
+
+export const FOUNDER = {
+  name: "John Scott",
+  title: "Founder",
+  image: FOUNDER_IMAGE,
+  quote:
+    "Every family deserves hope, dignity, and someone willing to show up when life gets hard.",
+  footerRecognition:
+    "Monique-A-Wish was founded in loving memory and community service by John Scott and supporters dedicated to helping families in need.",
+  homeLeadershipCopy:
+    "Led by founder John Scott, Monique-A-Wish continues to serve families through compassion, outreach, and year-round support.",
+} as const;
 
 export const SITE = {
   name: "Monique-A-Wish",
@@ -487,12 +499,16 @@ export const missionValues = [
 
 export const storyQuotes = [
   {
+    quote: FOUNDER.quote,
+    attribution: `${FOUNDER.name}, ${FOUNDER.title}`,
+  },
+  {
     quote: "We're not rich folks. This is all from the heart.",
-    attribution: "Founder, Monique-A-Wish",
+    attribution: `${FOUNDER.name}, ${FOUNDER.title}`,
   },
   {
     quote: "This all started with my daughter, Monique.",
-    attribution: "Founder, Monique-A-Wish",
+    attribution: `${FOUNDER.name}, ${FOUNDER.title}`,
   },
 ] as const;
 

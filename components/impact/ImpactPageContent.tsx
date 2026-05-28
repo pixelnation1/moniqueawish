@@ -6,6 +6,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { QualitativeStatCard } from "@/components/impact/QualitativeStatCard";
 import { ImpactDisclaimer } from "@/components/impact/ImpactDisclaimer";
 import { TransparencyMattersSection } from "@/components/impact/TransparencyMattersSection";
+import { FounderVisionSection } from "@/components/founder/FounderVisionSection";
 import { CommunityPartnersSection } from "@/components/impact/CommunityPartnersSection";
 import { ImpactGrowthCTA } from "@/components/impact/ImpactGrowthCTA";
 import {
@@ -163,6 +164,8 @@ export function ImpactPageContent() {
           </div>
         </div>
       </section>
+
+      <FounderVisionSection />
 
       <CommunityPartnersSection />
       <ImpactGrowthCTA />

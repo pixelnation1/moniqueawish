@@ -19,6 +19,7 @@ import { SupportSection } from "@/components/SupportSection";
 import { FadeIn } from "@/components/FadeIn";
 import { HomeSection } from "@/components/HomeSection";
 import { DecorativeAccents } from "@/components/DecorativeAccents";
+import { HomeFounderSection } from "@/components/founder/HomeFounderSection";
 import { SectionDivider } from "@/components/SectionDivider";
 import { CTA } from "@/lib/cta";
 import { programs } from "@/lib/site";
@@ -185,6 +186,10 @@ export function HomePageContent() {
           </div>
         </FadeIn>
       </HomeSection>
+
+      <SectionDivider />
+
+      <HomeFounderSection />
 
       <CTABlock />
     </>

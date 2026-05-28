@@ -25,7 +25,13 @@ export const IMAGE_SIZES = {
   logoFooter: "44px",
   logoCenterpiece: "(max-width: 768px) 220px, 320px",
   content: "(max-width: 1024px) 100vw, 900px",
+  founderPortrait: "(max-width: 640px) 280px, (max-width: 1024px) 40vw, 400px",
 } as const;
+
+/** Founder portrait — original path */
+export const FOUNDER_IMAGE = "/images/john.png";
+
+export const FOUNDER_IMAGE_DIMENSIONS = { width: 464, height: 1234 } as const;
 
 function basenameFromPath(src: string): string {
   const match = src.match(/\/images\/([^./]+)/);

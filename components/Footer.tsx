@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLinks, SITE } from "@/lib/site";
+import { FOUNDER, navLinks, SITE } from "@/lib/site";
 import { CTA } from "@/lib/cta";
 import { LogoDisplay } from "@/components/LogoDisplay";
 
@@ -20,6 +20,7 @@ export function Footer() {
           <p className="mt-4 text-sm leading-7 text-[#F8F3EA]/82">
             Turning grief into hope through compassionate support, community programs, and year-round giving.
           </p>
+          <p className="mt-4 text-sm leading-7 text-[#F8F3EA]/72">{FOUNDER.footerRecognition}</p>
         </div>
         <div>
           <h3 className="text-base text-[#F2C66D]">Quick Links</h3>
