@@ -4,6 +4,7 @@ import { CTABlock } from "@/components/CTABlock";
 import { ProgramCard } from "@/components/ProgramCard";
 import { Button } from "@/components/ui/Button";
 import { DonateBanner } from "@/components/DonateBanner";
+import { GetHelpBanner } from "@/components/get-help/GetHelpBanner";
 import { SupportSection } from "@/components/SupportSection";
 import { CTA } from "@/lib/cta";
 import { programs } from "@/lib/site";
@@ -34,6 +35,12 @@ export default function ProgramsPage() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F8F3EA] px-4 py-12 sm:px-5 sm:py-16 md:px-8">
+        <div className="mx-auto max-w-4xl">
+          <GetHelpBanner compact />
         </div>
       </section>
 

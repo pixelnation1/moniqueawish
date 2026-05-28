@@ -13,4 +13,6 @@ export const CTA = {
   trustLine: "100% community-focused. Every gift serves local families in need.",
   partnerPrimary: "Become a Community Partner",
   impactGrowthTitle: "Help Us Grow the Impact",
+  getHelp: "Get Help",
+  getHelpFamily: "Request Support for Your Family",
 } as const;

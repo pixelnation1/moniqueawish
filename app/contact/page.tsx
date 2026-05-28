@@ -1,6 +1,7 @@
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ContactForm } from "@/components/ContactForm";
+import { GetHelpBanner } from "@/components/get-help/GetHelpBanner";
 import { SITE } from "@/lib/site";
 import { pageSeo } from "@/lib/seo";
 
@@ -14,6 +15,12 @@ export default function ContactPage() {
         title="We Would Love to Hear From You"
         description="Reach out about donations, volunteering, or partnerships—Monique-A-Wish serves families in Emporia, Kansas with holiday, school, and emergency support."
       />
+
+      <section className="px-4 py-8 sm:px-5 md:px-8">
+        <div className="mx-auto max-w-4xl">
+          <GetHelpBanner compact />
+        </div>
+      </section>
 
       <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto grid min-w-0 max-w-6xl gap-8 sm:gap-12 lg:grid-cols-2">

@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { CTAButtonGroup } from "@/components/CTAButtonGroup";
+import { Button } from "@/components/ui/Button";
+import { GetHelpBanner } from "@/components/get-help/GetHelpBanner";
 import { FeaturedDonationSection } from "@/components/FeaturedDonationSection";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
@@ -17,6 +19,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { HomeSection } from "@/components/HomeSection";
 import { DecorativeAccents } from "@/components/DecorativeAccents";
 import { SectionDivider } from "@/components/SectionDivider";
+import { CTA } from "@/lib/cta";
 import { programs } from "@/lib/site";
 
 const missionItems = [
@@ -63,6 +66,11 @@ export function HomePageContent() {
               back-to-school support, emergency aid, and year-round family care in memory of Monique.
             </p>
             <CTAButtonGroup secondaryHref="/programs" />
+            <div className="mt-5">
+              <Button href="/get-help" variant="secondary" className="w-full sm:w-auto">
+                {CTA.getHelp}
+              </Button>
+            </div>
           </motion.div>
 
           <motion.div
@@ -141,6 +149,14 @@ export function HomePageContent() {
       <SectionDivider />
 
       <TrustPillarsSection />
+
+      <SectionDivider />
+
+      <section className="px-4 py-10 sm:px-5 sm:py-14 md:px-8">
+        <div className="mx-auto max-w-4xl">
+          <GetHelpBanner />
+        </div>
+      </section>
 
       <SectionDivider />
 

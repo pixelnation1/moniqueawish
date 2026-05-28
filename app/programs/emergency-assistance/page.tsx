@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
 import { CTAButtonGroup } from "@/components/CTAButtonGroup";
 import { DonateBanner } from "@/components/DonateBanner";
+import { GetHelpBanner } from "@/components/get-help/GetHelpBanner";
 import { CTA } from "@/lib/cta";
 import { pageSeo } from "@/lib/seo";
 
@@ -123,6 +124,12 @@ export default function EmergencyAssistancePage() {
             </Link>{" "}
             to donate supplies, sponsor a family, or volunteer.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-[#F8F3EA] px-4 py-10 sm:px-5 sm:py-14 md:px-8">
+        <div className="mx-auto max-w-4xl">
+          <GetHelpBanner compact />
         </div>
       </section>
 

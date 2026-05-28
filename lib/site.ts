@@ -7,11 +7,63 @@ export const SITE = {
   heroImage: "/images/moniquexmas.jpg",
 } as const;
 
+export const getHelpSupportTypes = [
+  {
+    title: "Christmas Celebration Support",
+    description:
+      "Holiday gifts, meals, and celebration support for families during the Christmas season.",
+    icon: "🎄",
+    href: "/programs/christmas-celebration",
+  },
+  {
+    title: "Back-to-School Support",
+    description: "Backpacks, school supplies, and encouragement for students starting the school year.",
+    icon: "📚",
+    href: "/programs/back-to-school-support",
+  },
+  {
+    title: "Emergency Assistance",
+    description: "Urgent help with essentials, resources, and compassionate connection during crisis.",
+    icon: "🆘",
+    href: "/programs/emergency-assistance",
+  },
+  {
+    title: "Community Resource Connections",
+    description:
+      "Guidance connecting your family to local resources and community support when available.",
+    icon: "🤝",
+  },
+] as const;
+
+export const getHelpProcessSteps = [
+  {
+    step: 1,
+    title: "Reach out",
+    description: "Contact Monique-A-Wish by email or through the request form below.",
+  },
+  {
+    step: 2,
+    title: "Share what support is needed",
+    description: "Tell us about your situation and the type of help your family is seeking.",
+  },
+  {
+    step: 3,
+    title: "Monique-A-Wish reviews available resources",
+    description: "Our team reviews current programs, supplies, and community capacity.",
+  },
+  {
+    step: 4,
+    title: "The team follows up when possible",
+    description: "We respond with care when support can be offered—timing depends on availability.",
+  },
+] as const;
+
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Our Story", href: "/our-story" },
   { label: "Impact", href: "/impact" },
   { label: "Programs", href: "/programs" },
+  { label: "Get Help", href: "/get-help" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ] as const;

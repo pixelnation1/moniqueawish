@@ -115,6 +115,12 @@ export const pageSeo = {
       "Contact Monique-A-Wish in Emporia, Kansas about donations, volunteering, partnerships, and family support programs.",
     path: "/contact",
   }),
+  getHelp: buildPageMetadata({
+    title: "Get Help",
+    description:
+      "Request family support from Monique-A-Wish in Emporia, Kansas — holiday assistance, back-to-school supplies, emergency aid, and community resource connections.",
+    path: "/get-help",
+  }),
   donate: buildPageMetadata({
     title: "Donate",
     description:
