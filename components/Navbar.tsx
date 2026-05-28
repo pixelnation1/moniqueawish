@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { navLinks, SITE } from "@/lib/site";
 import { CTA } from "@/lib/cta";
 import { LogoDisplay } from "@/components/LogoDisplay";
@@ -18,6 +18,12 @@ export function Navbar() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+
+  useEffect(() => {
+    const closeOnPopState = () => setMenuOpen(false);
+    window.addEventListener("popstate", closeOnPopState);
+    return () => window.removeEventListener("popstate", closeOnPopState);
+  }, []);
 
   return (
     <header className="glass-nav fixed inset-x-0 top-0 z-[60]">
@@ -73,19 +79,28 @@ export function Navbar() {
         </div>
       </div>
 
-      {menuOpen && (
-        <>
-          <button
-            type="button"
-            className="fixed inset-0 z-[70] bg-[#2A123F]/40 backdrop-blur-sm lg:hidden"
-            aria-label="Close menu overlay"
-            onClick={() => setMenuOpen(false)}
-          />
-          <nav
-            id="mobile-nav"
-            className="fixed inset-x-0 top-[3.25rem] z-[80] max-h-[calc(100dvh-3.25rem)] overflow-y-auto border-t border-[#5B2C83]/12 bg-[#FFFDF9] px-4 py-5 shadow-xl sm:top-[4.25rem] sm:max-h-[calc(100dvh-4.25rem)] lg:hidden"
-            aria-label="Mobile"
-          >
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            <motion.button
+              type="button"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-[70] bg-[#2A123F]/40 backdrop-blur-sm lg:hidden"
+              aria-label="Close menu overlay"
+              onClick={() => setMenuOpen(false)}
+            />
+            <motion.nav
+              id="mobile-nav"
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed inset-x-0 top-[3.25rem] z-[80] max-h-[calc(100dvh-3.25rem)] overflow-y-auto overscroll-contain border-t border-[#5B2C83]/12 bg-[#FFFDF9] px-4 py-5 shadow-xl sm:top-[4.25rem] sm:max-h-[calc(100dvh-4.25rem)] lg:hidden"
+              aria-label="Mobile"
+            >
             <div className="mx-auto flex max-w-lg flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
@@ -116,9 +131,10 @@ export function Navbar() {
                 {CTA.involvedPrimary}
               </Link>
             </div>
-          </nav>
-        </>
-      )}
+            </motion.nav>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

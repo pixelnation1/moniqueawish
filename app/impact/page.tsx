@@ -28,7 +28,7 @@ export default function ImpactPage() {
             title="By the Numbers"
             description="These figures represent real families, real moments, and real change in our community."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
             {impactStats.map((stat, idx) => (
               <StatCard
                 key={stat.label}
@@ -49,7 +49,7 @@ export default function ImpactPage() {
             title="Families Helped"
             description="From holiday celebrations to emergency aid, we walk alongside families with compassion—not just transactions."
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-3">
             {[
               "Holiday gift and meal distributions for families facing hardship.",
               "Back-to-school supplies so children start the year prepared and confident.",
@@ -57,7 +57,7 @@ export default function ImpactPage() {
             ].map((text) => (
               <article
                 key={text}
-                className="rounded-2xl border border-[#5B2C83]/12 bg-[#F8F3EA] p-6"
+                className="rounded-2xl border border-[#5B2C83]/12 bg-[#F8F3EA] p-5 sm:p-6"
               >
                 <p className="text-sm leading-7 text-[#4A4A4A]">{text}</p>
               </article>
@@ -69,11 +69,11 @@ export default function ImpactPage() {
       <section className="bg-[#F8F3EA] px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-6xl">
           <SectionHeader title="Voices from Our Community" />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-3">
             {testimonials.map((t) => (
               <blockquote
                 key={t.author}
-                className="rounded-2xl border border-[#D4A017]/30 bg-white p-6 shadow-sm"
+                className="rounded-2xl border border-[#D4A017]/30 bg-white p-5 shadow-sm sm:p-6"
               >
                 <p className="text-sm leading-7 text-[#4A4A4A]">&ldquo;{t.quote}&rdquo;</p>
                 <footer className="mt-4 text-sm font-semibold text-[#5B2C83]">— {t.author}</footer>
@@ -93,7 +93,7 @@ export default function ImpactPage() {
       </section>
 
       <section className="bg-[#F8F3EA] px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-[#5B2C83]/14 bg-white p-8 md:p-10">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-[#5B2C83]/14 bg-white p-6 sm:rounded-3xl sm:p-8 md:p-10">
           <SectionHeader
             align="left"
             title="Donation Transparency"

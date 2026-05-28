@@ -19,9 +19,9 @@ export function StatCard({ label, value, suffix, display, index = 0 }: StatCardP
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8 }}
-      className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur"
+      className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur sm:p-6"
     >
-      <div className="mb-5 inline-flex size-11 items-center justify-center rounded-full bg-[#F2C66D]/20 text-[#F2C66D]">
+      <div className="mb-4 inline-flex size-10 items-center justify-center rounded-full bg-[#F2C66D]/20 text-[#F2C66D] sm:mb-5 sm:size-11">
         <span aria-hidden>✨</span>
       </div>
       <AnimatedCounter value={value} suffix={suffix} display={display} />

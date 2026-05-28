@@ -19,10 +19,10 @@ export default function ContactPage() {
       />
 
       <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
+        <div className="mx-auto grid min-w-0 max-w-6xl gap-8 sm:gap-12 lg:grid-cols-2">
           <div>
             <SectionHeader align="left" title="Get in Touch" />
-            <ul className="mt-8 space-y-4 text-sm text-[#4A4A4A]">
+            <ul className="mt-6 space-y-4 text-sm leading-relaxed text-[#4A4A4A] sm:mt-8">
               <li>
                 <span className="font-semibold text-[#3D1B5F]">Email</span>
                 <br />

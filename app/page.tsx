@@ -117,7 +117,7 @@ export default function HomePage() {
           <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-3">
             {missionItems.map((item, idx) => (
               <FadeIn key={item.title} delay={idx * 0.08}>
-                <article className="h-full rounded-2xl border border-[#5B2C83]/12 bg-white/90 p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <article className="h-full rounded-2xl border border-[#5B2C83]/12 bg-white/90 p-5 shadow-md transition-all duration-300 sm:p-7 hover:-translate-y-1 hover:shadow-lg">
                   <h3 className="text-xl font-semibold text-[#3D1B5F]">{item.title}</h3>
                   <p className="prose-width mt-4 text-sm leading-relaxed text-[#4A4A4A]">{item.text}</p>
                 </article>
@@ -146,7 +146,7 @@ export default function HomePage() {
             title="Impact That Lasts All Year"
             description="Every contribution supports ongoing initiatives that restore stability, joy, and hope for families in need."
           />
-          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
             {impactStats.map((stat, idx) => (
               <StatCard
                 key={stat.label}

@@ -70,7 +70,7 @@ export default function EmergencyAssistancePage() {
             title="What This Program Provides"
             description="Practical relief and compassionate connections when families face sudden crisis."
           />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {provides.map((item) => (
               <article
                 key={item.label}

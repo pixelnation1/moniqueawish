@@ -25,7 +25,7 @@ export function CTABlock({
   showTrustLine = true,
 }: CTABlockProps) {
   return (
-    <section className="warm-cta-bg relative overflow-hidden px-4 py-16 sm:px-5 sm:py-20 md:px-8 md:py-36">
+    <section className="warm-cta-bg relative overflow-hidden px-4 py-14 sm:px-5 sm:py-20 md:px-8 md:py-36">
       <DecorativeAccents />
       <div className="section-glow left-[12%] top-[16%] h-44 w-44 bg-[#F2C66D]/55" />
       <div className="section-glow right-[8%] top-[34%] h-48 w-48 bg-[#5B2C83]/28" />
@@ -34,10 +34,10 @@ export function CTABlock({
         <h2 className="text-balance text-2xl font-semibold leading-snug tracking-tight text-[#3D1B5F] sm:text-3xl md:text-5xl lg:text-[3.25rem]">
           {title}
         </h2>
-        <p className="prose-width mx-auto mt-6 text-balance text-sm leading-relaxed text-[#4F4F4F] md:text-base">
+        <p className="prose-width mx-auto mt-4 text-balance text-sm leading-relaxed text-[#4F4F4F] sm:mt-6 md:text-base">
           {description}
         </p>
-        <div className="mt-8 flex justify-center sm:mt-10">
+        <div className="mt-6 flex justify-center sm:mt-10">
           <CTAButtonGroup
             primaryLabel={primaryLabel}
             primaryHref={primaryHref}
@@ -47,7 +47,7 @@ export function CTABlock({
           />
         </div>
         {showTrustLine && (
-          <p className="mx-auto mt-8 max-w-lg text-xs text-[#5B2C83]/75">{CTA.trustLine}</p>
+          <p className="mx-auto mt-6 max-w-lg text-xs leading-relaxed text-[#5B2C83]/75 sm:mt-8">{CTA.trustLine}</p>
         )}
       </FadeIn>
     </section>

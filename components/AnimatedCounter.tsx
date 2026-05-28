@@ -50,7 +50,7 @@ export function AnimatedCounter({
 
   if (display) {
     return (
-      <span ref={ref} className={`text-3xl font-semibold ${colorClass} ${className}`}>
+      <span ref={ref} className={`text-2xl font-semibold sm:text-3xl ${colorClass} ${className}`}>
         {display}
       </span>
     );
@@ -61,7 +61,7 @@ export function AnimatedCounter({
       ref={ref}
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : {}}
-      className={`text-3xl font-semibold ${colorClass} ${className}`}
+      className={`text-2xl font-semibold sm:text-3xl ${colorClass} ${className}`}
     >
       {count.toLocaleString()}
       {suffix}

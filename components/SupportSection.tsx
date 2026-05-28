@@ -47,7 +47,7 @@ export function SupportSection({ showHeader = true, className = "" }: SupportSec
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.65 }}
-            className="group relative overflow-hidden rounded-3xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/12 transition-shadow duration-300 hover:shadow-2xl"
+            className="group relative max-w-full overflow-hidden rounded-2xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/12 transition-shadow duration-300 sm:rounded-3xl hover:shadow-2xl"
           >
             <Image
               src="/images/help.png"
@@ -68,7 +68,7 @@ export function SupportSection({ showHeader = true, className = "" }: SupportSec
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-2xl border border-[#5B2C83]/10 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="rounded-2xl border border-[#5B2C83]/10 bg-white p-5 shadow-md transition-all duration-300 sm:p-6 hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="flex gap-4">
                   <span

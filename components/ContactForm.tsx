@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/Button";
 export function ContactForm() {
   return (
     <form
-      className="rounded-3xl border border-[#5B2C83]/14 bg-white p-6 shadow-lg md:p-8"
+      className="min-w-0 rounded-2xl border border-[#5B2C83]/14 bg-white p-5 shadow-lg sm:rounded-3xl sm:p-6 md:p-8"
       onSubmit={(e) => e.preventDefault()}
     >
-      <h2 className="text-2xl text-[#3D1B5F]">Send a Message</h2>
+      <h2 className="text-xl font-semibold text-[#3D1B5F] sm:text-2xl">Send a Message</h2>
       <div className="mt-6 space-y-4">
         <div>
           <label htmlFor="name" className="mb-1 block text-sm font-medium text-[#3D1B5F]">
@@ -20,7 +20,7 @@ export function ContactForm() {
             type="text"
             required
             autoComplete="name"
-            className="w-full rounded-xl border border-[#5B2C83]/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B2C83]/30"
+            className="w-full min-h-11 rounded-xl border border-[#5B2C83]/20 px-4 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#5B2C83]/30 sm:text-sm"
           />
         </div>
         <div>
@@ -33,7 +33,7 @@ export function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            className="w-full rounded-xl border border-[#5B2C83]/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B2C83]/30"
+            className="w-full min-h-11 rounded-xl border border-[#5B2C83]/20 px-4 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#5B2C83]/30 sm:text-sm"
           />
         </div>
         <div>
@@ -43,7 +43,7 @@ export function ContactForm() {
           <select
             id="inquiry"
             name="inquiry"
-            className="w-full rounded-xl border border-[#5B2C83]/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B2C83]/30"
+            className="w-full min-h-11 rounded-xl border border-[#5B2C83]/20 px-4 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#5B2C83]/30 sm:text-sm"
           >
             <option value="general">General Question</option>
             <option value="volunteer">Volunteer</option>
@@ -60,12 +60,14 @@ export function ContactForm() {
             name="message"
             rows={5}
             required
-            className="w-full rounded-xl border border-[#5B2C83]/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B2C83]/30"
+            className="w-full min-h-11 rounded-xl border border-[#5B2C83]/20 px-4 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#5B2C83]/30 sm:text-sm"
           />
         </div>
       </div>
       <div className="mt-6">
-        <Button type="submit">Send Message</Button>
+        <Button type="submit" className="w-full sm:w-auto">
+          Send Message
+        </Button>
       </div>
     </form>
   );

@@ -115,10 +115,10 @@ export function GalleryExperience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
-              className="col-span-1 rounded-2xl border border-[#D4A017]/30 bg-gradient-to-br from-[#3D1B5F] to-[#5B2C83] p-8 shadow-xl sm:col-span-2 lg:col-span-3"
+              className="col-span-2 rounded-xl border border-[#D4A017]/30 bg-gradient-to-br from-[#3D1B5F] to-[#5B2C83] p-5 shadow-xl sm:rounded-2xl sm:p-8 lg:col-span-3"
             >
-              <div className="gold-divider mb-4 h-px w-12 opacity-80" />
-              <h3 className="text-xl font-semibold text-[#F2C66D] md:text-2xl">{entry.title}</h3>
+              <div className="gold-divider mb-3 h-px w-12 opacity-80 sm:mb-4" />
+              <h3 className="text-lg font-semibold text-[#F2C66D] sm:text-xl md:text-2xl">{entry.title}</h3>
               <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#F8F3EA]/92 md:text-base">
                 {entry.description}
               </p>

@@ -4,6 +4,7 @@ export const CTA = {
   donateLarge: "Bring Hope to Local Families",
   donateNav: "Give Hope",
   donateSticky: "Donate",
+  donateMobileSticky: "Help a Family",
   involvedPrimary: "Become Part of the Mission",
   involvedSecondary: "Join Our Mission",
   volunteerPrimary: "Volunteer With Us",

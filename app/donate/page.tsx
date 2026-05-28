@@ -107,18 +107,18 @@ export default function DonatePage() {
             title="Choose Your Impact"
             description="Select a giving level that fits your heart. Every amount helps a family feel seen and supported."
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
             {donationTiers.map((tier) => (
               <article
                 key={tier.title}
-                className="flex flex-col rounded-2xl border border-[#5B2C83]/14 bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="flex flex-col rounded-2xl border border-[#5B2C83]/14 bg-white p-5 shadow-lg transition-all duration-300 sm:p-6 hover:-translate-y-1 hover:shadow-xl"
               >
-                <p className="text-2xl font-semibold text-[#D4A017]">{tier.amount}</p>
-                <h3 className="mt-2 text-xl text-[#3D1B5F]">{tier.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-7 text-[#4A4A4A]">{tier.description}</p>
+                <p className="text-xl font-semibold text-[#D4A017] sm:text-2xl">{tier.amount}</p>
+                <h3 className="mt-2 text-lg text-[#3D1B5F] sm:text-xl">{tier.title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-[#4A4A4A]">{tier.description}</p>
                 <a
                   href={`mailto:contact@moniqueawish.org?subject=Donation%20-%20${encodeURIComponent(tier.title)}`}
-                  className="mt-5 inline-flex rounded-full border border-[#5B2C83]/22 px-4 py-2 text-sm font-semibold text-[#5B2C83] transition hover:bg-[#E8DDF5]"
+                  className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full border border-[#5B2C83]/22 px-4 py-2.5 text-sm font-semibold text-[#5B2C83] transition hover:bg-[#E8DDF5] touch-manipulation"
                 >
                   Give at this level →
                 </a>
@@ -136,7 +136,7 @@ export default function DonatePage() {
       </section>
 
       <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-[#D4A017]/30 bg-gradient-to-br from-[#FFFDF9] to-[#E8DDF5] p-8 text-center shadow-lg md:p-12">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-[#D4A017]/30 bg-gradient-to-br from-[#FFFDF9] to-[#E8DDF5] p-6 text-center shadow-lg sm:rounded-3xl sm:p-8 md:p-12">
           <SectionHeader
             title="Monthly Giving"
             description="Sustain year-round support with a recurring gift. Monthly donors help us plan ahead and respond when families need us most."

@@ -69,7 +69,7 @@ export default function BackToSchoolSupportPage() {
             title="What This Program Provides"
             description="Everything a student needs to walk into the classroom feeling ready and supported."
           />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
             {provides.map((item) => (
               <article
                 key={item.label}

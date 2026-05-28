@@ -28,8 +28,8 @@ export function CTAButtonGroup({
 }: CTAButtonGroupProps) {
   const flexClass =
     layout === "stack"
-      ? "flex w-full flex-col items-stretch gap-5"
-      : "flex w-full flex-col gap-5 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-8 md:gap-10";
+      ? "flex w-full flex-col items-stretch gap-3 sm:gap-5"
+      : "flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-8 md:gap-10";
 
   return (
     <div className={`${flexClass} ${className}`}>

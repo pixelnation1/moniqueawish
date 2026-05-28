@@ -31,12 +31,12 @@ export function PageHero({ eyebrow, title, description, children, dark = false }
             {eyebrow}
           </p>
         )}
-        <h1 className={`text-balance text-3xl font-semibold leading-snug sm:text-4xl md:text-5xl lg:text-6xl ${dark ? "text-white" : "text-[#3D1B5F]"}`}>
+        <h1 className={`text-balance text-2xl font-semibold leading-snug sm:text-3xl md:text-5xl lg:text-6xl ${dark ? "text-white" : "text-[#3D1B5F]"}`}>
           {title}
         </h1>
         {description && (
           <p
-            className={`mx-auto mt-6 max-w-2xl text-balance text-base leading-8 ${
+            className={`prose-width mx-auto mt-4 max-w-2xl text-balance text-sm leading-relaxed sm:mt-6 sm:text-base ${
               dark ? "text-[#F8F3EA]/90" : "text-[#4E4E4E]"
             }`}
           >
