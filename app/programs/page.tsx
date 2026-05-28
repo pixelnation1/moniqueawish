@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
@@ -8,12 +7,9 @@ import { DonateBanner } from "@/components/DonateBanner";
 import { SupportSection } from "@/components/SupportSection";
 import { CTA } from "@/lib/cta";
 import { programs } from "@/lib/site";
+import { pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Programs",
-  description:
-    "Explore Monique-A-Wish programs including Christmas Celebration, Back-to-School Support, and Emergency Assistance.",
-};
+export const metadata = pageSeo.programs;
 
 export default function ProgramsPage() {
   return (
@@ -21,7 +17,7 @@ export default function ProgramsPage() {
       <PageHero
         eyebrow="Programs"
         title="Support That Meets Real Needs"
-        description="From holiday joy to year-round relief, our programs are designed with empathy and delivered with consistency."
+        description="From holiday assistance to year-round emergency aid, our Emporia, KS programs are designed with empathy and delivered with consistency."
       />
 
       <section className="px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-20">
@@ -47,7 +43,7 @@ export default function ProgramsPage() {
         <div className="mx-auto max-w-4xl text-center">
           <SectionHeader
             title="Volunteer Opportunities"
-            description="Join us in serving families across Emporia. Whether you can help at events, donate supplies, or spread the word—your time makes a difference."
+            description="Join us in serving families across Emporia, Kansas. Whether you help at events, donate supplies, or spread the word—your time makes a difference."
           />
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/contact">{CTA.involvedPrimary}</Button>

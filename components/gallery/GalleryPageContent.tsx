@@ -7,9 +7,10 @@ import { CTABlock } from "@/components/CTABlock";
 import { GalleryExperience } from "@/components/gallery/GalleryExperience";
 import { DecorativeAccents } from "@/components/DecorativeAccents";
 import { SectionDivider } from "@/components/SectionDivider";
-import { galleryImpactStats } from "@/lib/site";
+import { outreachHighlights } from "@/lib/site";
 import { CTA } from "@/lib/cta";
-import { StatCard } from "@/components/StatCard";
+import { QualitativeStatCard } from "@/components/impact/QualitativeStatCard";
+import { ImpactDisclaimer } from "@/components/impact/ImpactDisclaimer";
 
 export function GalleryPageContent() {
   return (
@@ -41,8 +42,8 @@ export function GalleryPageContent() {
             transition={{ duration: 0.65, delay: 0.14 }}
             className="prose-width mx-auto mt-5 text-balance leading-relaxed text-[#4E4E4E] sm:mt-8 md:text-lg"
           >
-            Every photo tells the story of families, volunteers, and supporters coming together to make
-            a difference.
+            Every photo captures Monique-A-Wish community outreach in Emporia, Kansas—holiday assistance,
+            back-to-school support, emergency aid, and volunteers making a difference.
           </motion.p>
         </div>
       </section>
@@ -70,16 +71,18 @@ export function GalleryPageContent() {
             description="These moments are made possible by donors, volunteers, and neighbors who believe in Emporia families."
           />
           <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
-            {galleryImpactStats.map((stat, idx) => (
-              <StatCard
+            {outreachHighlights.map((stat, idx) => (
+              <QualitativeStatCard
                 key={stat.label}
+                display={stat.display}
                 label={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
+                hint={stat.hint}
                 index={idx}
+                variant="light"
               />
             ))}
           </div>
+          <ImpactDisclaimer className="mt-8 sm:mt-10" light />
         </FadeIn>
       </section>
 

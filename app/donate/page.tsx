@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTABlock } from "@/components/CTABlock";
@@ -11,12 +10,9 @@ import {
 } from "@/components/TrustSections";
 import { donationTiers } from "@/lib/site";
 import { CTA } from "@/lib/cta";
+import { pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Donate",
-  description:
-    "Help families in Emporia, Kansas through Monique-A-Wish. Your gift provides meals, school supplies, holiday support, and emergency assistance.",
-};
+export const metadata = pageSeo.donate;
 
 const reasonsToGive = [
   {
@@ -64,7 +60,7 @@ export default function DonatePage() {
             <div className="hero-overlay absolute inset-0 z-10 rounded-[2rem]" />
             <Image
               src="/images/moniquexmas.jpg"
-              alt="Monique-A-Wish community giving event bringing holiday hope to families"
+              alt="Donate to Monique-A-Wish — community giving and holiday support for Emporia, Kansas families"
               width={1200}
               height={900}
               priority

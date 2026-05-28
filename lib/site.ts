@@ -16,19 +16,164 @@ export const navLinks = [
   { label: "Contact", href: "/contact" },
 ] as const;
 
-export const impactStats = [
-  { label: "Families Helped", value: 1250, suffix: "+" },
-  { label: "Years Serving Community", value: 9, suffix: "+" },
-  { label: "Community Programs", value: 12, suffix: "" },
-  { label: "Year-Round Support", value: 365, suffix: " Days", display: "365 Days" },
+/** Shown beneath impact stat grids — honest tracking disclaimer */
+export const IMPACT_DISCLAIMER =
+  "Impact numbers will continue to be updated as Monique-A-Wish grows and tracks annual outreach.";
+
+export const TRANSPARENCY_MATTERS_COPY =
+  "Every gift helps support families through programs focused on holiday assistance, school support, emergency needs, and community care.";
+
+/** Homepage & impact overview — qualitative displays, not fabricated counts */
+export const homepageImpactStats = [
+  {
+    display: "13+",
+    label: "Years Serving the Community",
+    hint: "A growing legacy of local outreach in Emporia and surrounding areas",
+    icon: "🕯️",
+  },
+  {
+    display: "Ongoing",
+    label: "Families Supported Each Year",
+    hint: "Support expands season by season with volunteers and donors",
+    icon: "🏠",
+  },
+  {
+    display: "Annual",
+    label: "Holiday Support Provided",
+    hint: "Gifts, meals, and celebration for families during Christmas",
+    icon: "🎁",
+  },
+  {
+    display: "Year-Round",
+    label: "Community Care",
+    hint: "Holiday, school, emergency, and ongoing support for local families",
+    icon: "💜",
+  },
 ] as const;
 
-export const donationImpactStats = [
-  { label: "Families Helped", value: 1250, suffix: "+" },
-  { label: "Children Supported", value: 2100, suffix: "+" },
-  { label: "Community Volunteers", value: 180, suffix: "+" },
-  { label: "Holiday Gifts Delivered", value: 3200, suffix: "+" },
+export const trustPillars = [
+  {
+    title: "Community-rooted mission",
+    description:
+      "Monique-A-Wish was born in Emporia and stays focused on neighbors helping neighbors—with transparency and heart.",
+    icon: "🌾",
+  },
+  {
+    title: "Direct support for families",
+    description:
+      "Contributions and volunteer time go toward practical help families can feel: supplies, meals, gifts, and encouragement.",
+    icon: "🤲",
+  },
+  {
+    title: "Volunteer-powered programs",
+    description:
+      "Events and outreach are strengthened by volunteers who donate time, sorting, setup, and welcome at every gathering.",
+    icon: "🙌",
+  },
+  {
+    title: "Built in memory of Monique",
+    description:
+      "Every act of service honors a beloved daughter and keeps her spirit alive through love in action.",
+    icon: "♾️",
+  },
+  {
+    title: "Focused on dignity, hope, and care",
+    description:
+      "Families are welcomed with respect—never judgment—so support feels warm, human, and hopeful.",
+    icon: "✨",
+  },
 ] as const;
+
+export const programImpactBreakdown = [
+  {
+    title: "Christmas Celebration",
+    description:
+      "Annual holiday outreach bringing gifts, meals, and joyful gathering to families facing hardship.",
+    href: "/programs/christmas-celebration",
+    icon: "🎄",
+  },
+  {
+    title: "Back-to-School Support",
+    description:
+      "Backpacks, supplies, and encouragement so students start the school year prepared and confident.",
+    href: "/programs/back-to-school-support",
+    icon: "📚",
+  },
+  {
+    title: "Emergency Assistance",
+    description:
+      "Responsive aid for urgent needs—essentials, resources, and compassionate connection in crisis moments.",
+    href: "/programs/emergency-assistance",
+    icon: "🆘",
+  },
+] as const;
+
+export const transparencyPoints = [
+  "Programs and direct family support are the priority for donations and in-kind gifts.",
+  "Volunteers and community partners help keep outreach personal and cost-effective.",
+  "We welcome questions about how gifts support holiday, school, emergency, and year-round care.",
+  "As outreach grows, we are building clearer annual reporting for donors and grant partners.",
+] as const;
+
+export const volunteerImpactItems = [
+  {
+    title: "Event day volunteers",
+    description:
+      "Setup, greeting families, distributing gifts and supplies, and creating a welcoming atmosphere at celebrations.",
+  },
+  {
+    title: "Donation sorting & prep",
+    description:
+      "Organizing donated items, preparing backpacks, and ensuring families receive thoughtful, ready-to-go support.",
+  },
+  {
+    title: "Community ambassadors",
+    description:
+      "Sharing the mission, connecting families to resources, and inviting neighbors to give time or support.",
+  },
+] as const;
+
+export const communityPartnerPlaceholders = [
+  {
+    title: "Local Businesses",
+    description:
+      "Placeholder for sponsors who provide supplies, event support, or in-kind resources for families.",
+  },
+  {
+    title: "Churches & Faith Groups",
+    description:
+      "Placeholder for faith communities who volunteer, donate, and help spread the word with compassion.",
+  },
+  {
+    title: "Volunteers",
+    description:
+      "The heartbeat of our mission—neighbors who show up with hands, hearts, and time.",
+  },
+  {
+    title: "Community Donors",
+    description:
+      "Individuals and families whose gifts—large or small—keep programs possible year after year.",
+  },
+  {
+    title: "Future Grant Partners",
+    description:
+      "Placeholder for foundations and grants that can help scale outreach responsibly as we grow.",
+  },
+] as const;
+
+/** Qualitative highlights for donate/gallery — no fabricated totals */
+export const outreachHighlights = [
+  { display: "Local", label: "Families Served", hint: "Emporia-area outreach" },
+  { display: "Volunteer", label: "Powered Events", hint: "Community hands at work" },
+  { display: "3", label: "Core Programs", hint: "Holiday, school, emergency" },
+  { display: "Growing", label: "Community Reach", hint: "Expanding with support" },
+] as const;
+
+/** @deprecated Use homepageImpactStats — kept for gradual migration */
+export const impactStats = homepageImpactStats;
+
+export const donationImpactStats = outreachHighlights;
+export const galleryImpactStats = outreachHighlights;
 
 export const programs = [
   {
@@ -178,13 +323,6 @@ export const galleryStorySections = [
       "Monique-A-Wish is powered by volunteers, donors, and partners across Emporia. Together, we turn remembrance into lasting hope for families in need.",
     insertAfter: 12,
   },
-] as const;
-
-export const galleryImpactStats = [
-  { label: "Years Serving Community", value: 9, suffix: "+" },
-  { label: "Families Helped", value: 1250, suffix: "+" },
-  { label: "Volunteers Involved", value: 180, suffix: "+" },
-  { label: "Annual Programs", value: 12, suffix: "" },
 ] as const;
 
 export const timeline = [

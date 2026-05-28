@@ -51,7 +51,7 @@ export function SupportSection({ showHeader = true, className = "" }: SupportSec
           >
             <Image
               src="/images/help.png"
-              alt="Monique-A-Wish volunteers offering hands-on help to families in need"
+              alt="Monique-A-Wish volunteers offering hands-on family support in Emporia, Kansas"
               width={900}
               height={900}
               sizes="(max-width: 1024px) 100vw, 50vw"

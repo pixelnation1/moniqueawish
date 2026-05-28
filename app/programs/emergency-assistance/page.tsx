@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -6,12 +5,9 @@ import { CTABlock } from "@/components/CTABlock";
 import { CTAButtonGroup } from "@/components/CTAButtonGroup";
 import { DonateBanner } from "@/components/DonateBanner";
 import { CTA } from "@/lib/cta";
+import { pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Emergency Assistance",
-  description:
-    "Monique-A-Wish provides urgent support to families in Emporia, Kansas facing unexpected hardship through essential items, direct aid, and community resources.",
-};
+export const metadata = pageSeo.emergency;
 
 const provides = [
   { icon: "🍎", label: "Emergency food support" },
@@ -52,7 +48,7 @@ export default function EmergencyAssistancePage() {
           <div className="relative overflow-hidden rounded-2xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/15 sm:rounded-[2rem] sm:shadow-2xl">
             <Image
               src="/images/emergancyservices.png"
-              alt="Monique-A-Wish emergency assistance supplies and support for families in crisis"
+              alt="Emergency assistance for Emporia, Kansas families in crisis through Monique-A-Wish"
               width={900}
               height={700}
               priority
@@ -79,7 +75,7 @@ export default function EmergencyAssistancePage() {
                 <span className="text-3xl" aria-hidden>
                   {item.icon}
                 </span>
-                <p className="mt-4 font-semibold text-[#3D1B5F]">{item.label}</p>
+                <h3 className="mt-4 text-base font-semibold text-[#3D1B5F]">{item.label}</h3>
               </article>
             ))}
           </div>

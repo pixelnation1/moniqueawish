@@ -125,7 +125,7 @@ export function OurStoryPageContent() {
           <div className="hero-overlay pointer-events-none absolute inset-0 z-10 rounded-[2rem]" />
           <Image
             src="/images/together.png"
-            alt="Monique-A-Wish families and volunteers united in community support"
+            alt="Monique-A-Wish families and volunteers united in community support in Emporia, Kansas"
             width={1400}
             height={700}
             className="h-[280px] w-full object-cover object-center md:h-[380px]"

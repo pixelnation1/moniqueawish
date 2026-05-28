@@ -35,7 +35,7 @@ export function LogoDisplay({
     <div className={`relative shrink-0 ${container} ${glowClass} ${className}`}>
       <Image
         src="/images/moniquelogo.jpg"
-        alt="Monique-A-Wish logo"
+        alt="Monique-A-Wish logo — Emporia, Kansas nonprofit serving local families"
         width={width}
         height={height}
         priority={priority}

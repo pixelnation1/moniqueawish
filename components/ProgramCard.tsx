@@ -32,7 +32,7 @@ export function ProgramCard({
         <div className="relative h-44 overflow-hidden rounded-t-2xl sm:h-52 md:h-56 md:rounded-t-3xl">
           <Image
             src={image}
-            alt={`${title} community support event by Monique-A-Wish`}
+            alt={`${title} — Monique-A-Wish family support program in Emporia, Kansas`}
             fill
             sizes="(max-width: 1024px) 100vw, 33vw"
             className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.06]"

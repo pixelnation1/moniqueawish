@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -6,12 +5,9 @@ import { CTABlock } from "@/components/CTABlock";
 import { CTAButtonGroup } from "@/components/CTAButtonGroup";
 import { DonateBanner } from "@/components/DonateBanner";
 import { CTA } from "@/lib/cta";
+import { pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Back-to-School Support",
-  description:
-    "Monique-A-Wish provides backpacks, school supplies, and encouragement so students in Emporia, Kansas start the school year with confidence.",
-};
+export const metadata = pageSeo.backToSchool;
 
 const provides = [
   { icon: "🎒", label: "Backpacks" },
@@ -51,7 +47,7 @@ export default function BackToSchoolSupportPage() {
           <div className="relative overflow-hidden rounded-2xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/15 sm:rounded-[2rem] sm:shadow-2xl">
             <Image
               src="/images/backtoschool.png"
-              alt="Monique-A-Wish back-to-school supplies and backpacks for students"
+              alt="Back-to-school support — backpacks and supplies for Emporia, Kansas students from Monique-A-Wish"
               width={900}
               height={700}
               priority
@@ -78,7 +74,7 @@ export default function BackToSchoolSupportPage() {
                 <span className="text-3xl" aria-hidden>
                   {item.icon}
                 </span>
-                <p className="mt-4 font-semibold text-[#3D1B5F]">{item.label}</p>
+                <h3 className="mt-4 text-base font-semibold text-[#3D1B5F]">{item.label}</h3>
               </article>
             ))}
           </div>

@@ -8,7 +8,7 @@ export function ContactForm() {
       className="min-w-0 rounded-2xl border border-[#5B2C83]/14 bg-white p-5 shadow-lg sm:rounded-3xl sm:p-6 md:p-8"
       onSubmit={(e) => e.preventDefault()}
     >
-      <h2 className="text-xl font-semibold text-[#3D1B5F] sm:text-2xl">Send a Message</h2>
+      <h3 className="text-xl font-semibold text-[#3D1B5F] sm:text-2xl">Send a Message</h3>
       <div className="mt-6 space-y-4">
         <div>
           <label htmlFor="name" className="mb-1 block text-sm font-medium text-[#3D1B5F]">

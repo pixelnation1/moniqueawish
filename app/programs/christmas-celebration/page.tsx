@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -6,12 +5,9 @@ import { CTABlock } from "@/components/CTABlock";
 import { CTAButtonGroup } from "@/components/CTAButtonGroup";
 import { DonateBanner } from "@/components/DonateBanner";
 import { CTA } from "@/lib/cta";
+import { pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Christmas Celebration",
-  description:
-    "Monique-A-Wish creates holiday memories filled with love, dignity, and joy through gifts, meals, and family celebration in Emporia, Kansas.",
-};
+export const metadata = pageSeo.christmas;
 
 const provides = [
   { icon: "🎁", label: "Christmas gifts for children" },
@@ -40,7 +36,7 @@ export default function ChristmasCelebrationPage() {
           <div>
             <p className="mb-3 text-xs tracking-[0.28em] text-[#5B2C83] uppercase sm:mb-4">Programs</p>
             <h1 className="text-2xl font-semibold leading-snug text-[#3D1B5F] sm:text-4xl md:text-5xl">Christmas Celebration</h1>
-            <p className="mt-3 text-lg leading-snug text-[#5B2C83] sm:mt-4 sm:text-2xl md:text-3xl">
+            <p className="mt-3 text-lg font-medium leading-snug text-[#5B2C83] sm:mt-4 sm:text-2xl md:text-3xl">
               Creating Holiday Memories Filled With Love, Dignity, and Joy
             </p>
             <p className="mt-4 text-sm leading-relaxed text-[#4E4E4E] sm:mt-6 sm:text-base sm:leading-8">
@@ -54,7 +50,7 @@ export default function ChristmasCelebrationPage() {
           <div className="relative overflow-hidden rounded-2xl border border-[#5B2C83]/12 shadow-xl shadow-[#3D1B5F]/15 sm:rounded-[2rem] sm:shadow-2xl">
             <Image
               src="/images/moniquexmas.jpg"
-              alt="Monique-A-Wish Christmas Celebration bringing holiday joy to families and children"
+              alt="Christmas Celebration holiday assistance for Emporia, Kansas families at Monique-A-Wish"
               width={900}
               height={700}
               priority
@@ -81,7 +77,7 @@ export default function ChristmasCelebrationPage() {
                 <span className="text-3xl" aria-hidden>
                   {item.icon}
                 </span>
-                <p className="mt-4 font-semibold text-[#3D1B5F]">{item.label}</p>
+                <h3 className="mt-4 text-base font-semibold text-[#3D1B5F]">{item.label}</h3>
               </article>
             ))}
           </div>

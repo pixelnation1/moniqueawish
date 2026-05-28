@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/FadeIn";
-import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { QualitativeStatCard } from "@/components/impact/QualitativeStatCard";
+import { ImpactDisclaimer } from "@/components/impact/ImpactDisclaimer";
 import { CTA } from "@/lib/cta";
-import { donationImpactStats } from "@/lib/site";
+import { outreachHighlights } from "@/lib/site";
 
 export function FeaturedDonationSection() {
   return (
@@ -39,21 +40,18 @@ export function FeaturedDonationSection() {
         <p className="mx-auto mt-4 max-w-md text-sm text-[#5B2C83]/90">{CTA.donateMicrocopy}</p>
 
         <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 md:grid-cols-4 md:gap-6">
-          {donationImpactStats.map((stat) => (
-            <div
+          {outreachHighlights.map((stat, idx) => (
+            <QualitativeStatCard
               key={stat.label}
-              className="rounded-2xl border border-[#5B2C83]/12 bg-white/85 px-4 py-5 shadow-md backdrop-blur-sm"
-            >
-              <AnimatedCounter
-                value={stat.value}
-                suffix={stat.suffix}
-                tone="brand"
-                className="text-2xl md:text-3xl"
-              />
-              <p className="mt-1 text-xs text-[#5B2C83] md:text-sm">{stat.label}</p>
-            </div>
+              display={stat.display}
+              label={stat.label}
+              hint={stat.hint}
+              index={idx}
+              variant="brand"
+            />
           ))}
         </div>
+        <ImpactDisclaimer className="mt-6 sm:mt-8" />
       </FadeIn>
     </section>
   );

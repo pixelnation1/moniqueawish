@@ -8,7 +8,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 const impactCards = [
   {
     image: "/images/community.png",
-    alt: "Monique-A-Wish volunteers and families united in community outreach",
+    alt: "Monique-A-Wish community volunteers and families united at an outreach event in Emporia, Kansas",
     title: "Strength in Community",
     description:
       "Neighbors, volunteers, and partners come together to lift families with practical support, shared meals, and moments of genuine connection.",
@@ -16,7 +16,7 @@ const impactCards = [
   },
   {
     image: "/images/together.png",
-    alt: "Families and supporters standing together at a Monique-A-Wish event",
+    alt: "Families and supporters standing together at a Monique-A-Wish community event in Emporia, KS",
     title: "Together We Give More",
     description:
       "When our community stands united, every gift goes further—turning collective compassion into lasting hope for families across Emporia.",

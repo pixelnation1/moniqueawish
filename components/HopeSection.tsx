@@ -44,7 +44,7 @@ export function HopeSection() {
           <div className="relative overflow-hidden rounded-[2rem] border border-white/60 shadow-2xl shadow-[#3D1B5F]/20">
             <Image
               src="/images/hope.png"
-              alt="Inspirational moment of hope from the Monique-A-Wish community"
+              alt="Hope and community care from Monique-A-Wish nonprofit in Emporia, Kansas"
               width={900}
               height={900}
               sizes="(max-width: 1024px) 100vw, 50vw"
