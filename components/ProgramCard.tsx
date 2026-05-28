@@ -22,13 +22,13 @@ export function ProgramCard({ title, description, image, index = 0, href = "/pro
       whileHover={{ y: -8 }}
       className="group overflow-hidden rounded-3xl border border-[#5B2C83]/14 bg-white shadow-lg shadow-[#3D1B5F]/8"
     >
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative h-56 overflow-hidden rounded-t-3xl">
         <Image
           src={image}
           alt={`${title} community support event by Monique-A-Wish`}
           fill
           sizes="(max-width: 1024px) 100vw, 33vw"
-          className="object-cover transition duration-500 group-hover:scale-105"
+          className="object-cover object-center transition duration-500 group-hover:scale-105"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#3D1B5F]/30 via-[#3D1B5F]/10 to-transparent" />
       </div>

@@ -34,13 +34,13 @@ export const programs = [
     title: "Back-to-School Support",
     description:
       "Equipping students with backpacks, school supplies, and encouragement so every child starts with confidence.",
-    image: "/images/moniquexmas.jpg",
+    image: "/images/backtoschool.png",
   },
   {
     title: "Emergency Assistance",
     description:
       "Providing urgent relief for families facing unexpected hardship through direct aid and partner resources.",
-    image: "/images/moniquexmas.jpg",
+    image: "/images/emergancyservices.png",
   },
 ] as const;
 
