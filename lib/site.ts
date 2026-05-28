@@ -29,6 +29,7 @@ export const programs = [
     description:
       "Bringing joy and dignity to families during the holiday season through gifts, meals, and shared celebration.",
     image: "/images/moniquexmas.jpg",
+    href: "/programs/christmas-celebration",
   },
   {
     title: "Back-to-School Support",
